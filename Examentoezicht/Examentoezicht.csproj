@@ -158,6 +158,31 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310250837319_AddedAPEmailField.cs" />
+    <Compile Include="Migrations\201310250837319_AddedAPEmailField.Designer.cs">
+      <DependentUpon>201310250837319_AddedAPEmailField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310250842466_AddedAPEmailField2.cs" />
+    <Compile Include="Migrations\201310250842466_AddedAPEmailField2.Designer.cs">
+      <DependentUpon>201310250842466_AddedAPEmailField2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310250844269_AddedAPEmailFieldFinal.cs" />
+    <Compile Include="Migrations\201310250844269_AddedAPEmailFieldFinal.Designer.cs">
+      <DependentUpon>201310250844269_AddedAPEmailFieldFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310250917399_DiscriminatorNotNull.cs" />
+    <Compile Include="Migrations\201310250917399_DiscriminatorNotNull.Designer.cs">
+      <DependentUpon>201310250917399_DiscriminatorNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310250938268_DiscriminatorNotNull2.cs" />
+    <Compile Include="Migrations\201310250938268_DiscriminatorNotNull2.Designer.cs">
+      <DependentUpon>201310250938268_DiscriminatorNotNull2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310250940088_DiscriminatorNotNull3.cs" />
+    <Compile Include="Migrations\201310250940088_DiscriminatorNotNull3.Designer.cs">
+      <DependentUpon>201310250940088_DiscriminatorNotNull3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +240,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201310250837319_AddedAPEmailField.resx">
+      <DependentUpon>201310250837319_AddedAPEmailField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250842466_AddedAPEmailField2.resx">
+      <DependentUpon>201310250842466_AddedAPEmailField2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250844269_AddedAPEmailFieldFinal.resx">
+      <DependentUpon>201310250844269_AddedAPEmailFieldFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250917399_DiscriminatorNotNull.resx">
+      <DependentUpon>201310250917399_DiscriminatorNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250938268_DiscriminatorNotNull2.resx">
+      <DependentUpon>201310250938268_DiscriminatorNotNull2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250940088_DiscriminatorNotNull3.resx">
+      <DependentUpon>201310250940088_DiscriminatorNotNull3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

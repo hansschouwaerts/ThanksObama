@@ -86,7 +86,7 @@ namespace Examentoezicht.Controllers
             if (ModelState.IsValid)
             {
                 // Create a local login before signing in the user
-                var user = new User(model.UserName);
+                User user = new User(model.UserName);
                 var result = await IdentityManager.Users.CreateLocalUserAsync(user, model.Password);
                 if (result.Success)
                 {
