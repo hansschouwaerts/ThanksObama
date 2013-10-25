@@ -154,12 +154,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExamenToezichtController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReservatieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310202248213_Initial.cs" />
+    <Compile Include="Migrations\201310202248213_Initial.Designer.cs">
+      <DependentUpon>201310202248213_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Toezichtbeurt.cs" />
+    <Compile Include="Models\ExamenToezichtEntiteiten.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Lector.cs" />
+    <Compile Include="Models\Reservaties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -185,7 +196,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -209,12 +222,27 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ExamenToezicht\Create.cshtml" />
+    <Content Include="Views\ExamenToezicht\Delete.cshtml" />
+    <Content Include="Views\ExamenToezicht\Details.cshtml" />
+    <Content Include="Views\ExamenToezicht\Edit.cshtml" />
+    <Content Include="Views\ExamenToezicht\Index.cshtml" />
+    <Content Include="Views\Reservatie\Create.cshtml" />
+    <Content Include="Views\Reservatie\Delete.cshtml" />
+    <Content Include="Views\Reservatie\Details.cshtml" />
+    <Content Include="Views\Reservatie\Edit.cshtml" />
+    <Content Include="Views\Reservatie\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201310202248213_Initial.resx">
+      <DependentUpon>201310202248213_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

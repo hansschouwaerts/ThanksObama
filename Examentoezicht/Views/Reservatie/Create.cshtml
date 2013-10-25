@@ -1,0 +1,70 @@
+﻿@model Examentoezicht.Models.Reservatie
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Reservatie</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.ToezichtbeurtId, "Datum", new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownList("ToezichtbeurtId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ToezichtbeurtId, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Toezichtbeurt.Start, "Start", new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownList("StartTijd", String.Empty)
+                        @Html.ValidationMessageFor(model => model.Toezichtbeurt.Start, null, new { @class = "help-inline" })
+                        </div>
+                    </div>
+
+        @*<div class="control-group">
+            @Html.LabelFor(model => model.LectorId, "LectorId", new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownList("LectorId", String.Empty)
+                @Html.ValidationMessageFor(model => model.LectorId, null, new { @class = "help-inline" })
+            </div>
+        </div>*@
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.AangemaaktOp, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.AangemaaktOp)
+                @Html.ValidationMessageFor(model => model.AangemaaktOp, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.AangepastOp, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.AangepastOp)
+                @Html.ValidationMessageFor(model => model.AangepastOp, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

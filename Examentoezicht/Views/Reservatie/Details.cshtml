@@ -1,0 +1,49 @@
+﻿@model Examentoezicht.Models.Reservatie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Reservatie</legend>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lector.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lector.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Toezichtbeurt.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Toezichtbeurt.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AangemaaktOp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AangemaaktOp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AangepastOp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AangepastOp)
+        </dd>
+
+    </dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ReservatieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
